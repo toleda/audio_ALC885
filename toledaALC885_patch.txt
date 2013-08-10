@@ -46,7 +46,7 @@ cd 885
 
 II.	Install ALC885 layouts, pathmaps and pin configurations, select one layout.xml
 
-sudo install -m 644 -o root -g wheel info.plist /System/Library/Extensions/AppleHDA.kext/Contents/Plugins/AppleHDAHardwareConfigDriver.kext/Contents/info.plist
+sudo install -m 644 -o root -g wheel Info.plist /System/Library/Extensions/AppleHDA.kext/Contents/Plugins/AppleHDAHardwareConfigDriver.kext/Contents/Info.plist
 
 sudo rm -R /System/Library/Extensions/AppleHDA.kext/Contents/Resources/layout*
 
@@ -95,7 +95,7 @@ Terminal commands (copy and paste, one line at time, enter/return)
 	cd Desktop/audio_ALC885
 	unzip 885.zip
 	cd 885
-	sudo install -m 644 -o root -g wheel info.plist /System/Library/Extensions/AppleHDA.kext/Contents/Plugins/AppleHDAHardwareConfigDriver.kext/Contents/info.plist
+	sudo install -m 644 -o root -g wheel Info.plist /System/Library/Extensions/AppleHDA.kext/Contents/Plugins/AppleHDAHardwareConfigDriver.kext/Contents/Info.plist
 	sudo rm -R /System/Library/Extensions/AppleHDA.kext/Contents/Resources/layout*
 	sudo install -m 644 -o root -g wheel Platforms.xml.zlib layout1.xml.zlib  /System/Library/Extensions/AppleHDA.kext/Contents/Resources
 	sudo chown -R root:wheel /System/Library/Extensions/AppleHDA.kext
