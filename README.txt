@@ -25,12 +25,16 @@ Realtek ALC885 AppleHDA.kext Audio_ID
 Four techniques enable the Realtek ALC AppleHDA.kext, select one
 http://www.insanelymac.com/forum/topic/290796-realtek-alc-applehda-audio-injection/
 1. No dsdt/audio enabler = Audio_ID, install either kext (use 1a or 1b, not both)
-1a. Audio_ID = 1/HDAEnabler1.kext https://github.com/toleda/audio_HDAEnabler1
+https://github.com/toleda/audio_kext_enabler
+1a. Audio_ID = 1/HDAEnabler1.kext.zip 
 2. dsdt/HDEF/layout-id = Audio_ID, see {Guide} Add or Edit dsdt/HDEF.pdf
+https://github.com/toleda/audio_ALCInjection
 2a. Audio_ID = 1/layout-id: 0x01, 0x00, 0x00, 0x00, 0x00
 3. ssdt/HDEF/layout-id = Audio_ID, see {Guide} Add ssdt/HDEF.pdf
-3a. Audio_ID = 1/layout-id: 0x01, 0x00, 0x00, 0x00, 0x00
+https://github.com/toleda/audio_ssdt_enabler
+3a. Audio_ID = 1/audio_ssdt-hdae-1.zip
 4. Clover/Config.plist/PCI/Devices, see ML-Clover Realtek ALC AppleHDA Injection.pdf
+https://github.com/toleda/audio_ALCInjection
 4a. Audio_ID = 1/Audio/Inject=1
 
 Download
