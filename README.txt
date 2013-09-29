@@ -33,7 +33,7 @@ https://github.com/toleda/audio_ALCInjection
 3. ssdt/HDEF/layout-id = Audio_ID, see {Guide} Add ssdt/HDEF.pdf
 https://github.com/toleda/audio_ssdt_enabler
 3a. Audio_ID = 1/audio_ssdt-hdae-1.zip
-4. Clover/Config.plist/PCI/Devices, see ML-Clover Realtek ALC AppleHDA Injection.pdf
+4. Clover/Config.plist/Devices, see ML-Clover Realtek ALC AppleHDA Injection.pdf
 https://github.com/toleda/audio_ALCInjection
 4a. Audio_ID = 1/Audio/Inject=1
 
