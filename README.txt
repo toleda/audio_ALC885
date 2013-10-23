@@ -9,13 +9,15 @@ ____________________________________________________________Download ZIP >  >
 Requirements
 1. Native S/L/E/AppleHDA.kext (restore native AppleHDA.kext with Combo Update)
 2. Supported OS X versions:
-2a. alc885-84 - Mountain Lion 10.8 - 10.8.4/AppleHDA.kext_v2.3.7
+2a. alc885-90 - Mountain Lion 10.8.5/AppleHDA.kext_v2.5.2
 2b. alc885-85 - Mountain Lion 10.8.5/AppleHDA.kext_v2.4.7
+2c. alc885-84 - Mountain Lion 10.8 - 10.8.4/AppleHDA.kext_v2.3.7
 
 Realtek ALC AppleHDA Guides https://github.com/toleda/audio_ALCInjection
-1. ML-Realtek ALC AppleHDA Capabilities.pdf
-2. ML-Realtek ALC AppleHDA Screenshots.pdf
-3. ML-Customizing the Realtek AppleHDA.pdf
+1. M-Realtek ALC AppleHDA Capabilities.pdf
+2. M-Realtek ALC AppleHDA Customization.pdf
+3. M-Realtek ALC AppleHDA No Audio.pdf
+4. M-Realtek ALC AppleHDA Screenshots.pdf
 
 Realtek ALC885 AppleHDA.kext Audio_ID
 1. Audio_ID: 1 supports 5 and 6 port ALC8xx onboard and/or AMD/Nvidia HDMI audio  
@@ -25,16 +27,12 @@ Realtek ALC885 AppleHDA.kext Audio_ID
 Four techniques enable the Realtek ALC AppleHDA.kext, select one
 http://www.insanelymac.com/forum/topic/290796-realtek-alc-applehda-audio-injection/
 1. No dsdt/audio enabler = Audio_ID, install either kext (use 1a or 1b, not both)
-https://github.com/toleda/audio_kext_enabler
-1a. Audio_ID = 1/HDAEnabler1.kext.zip 
+1a. Audio_ID = 1/HDAEnabler1.kext https://github.com/toleda/audio_HDAEnabler1
 2. dsdt/HDEF/layout-id = Audio_ID, see {Guide} Add or Edit dsdt/HDEF.pdf
-https://github.com/toleda/audio_ALCInjection
 2a. Audio_ID = 1/layout-id: 0x01, 0x00, 0x00, 0x00, 0x00
 3. ssdt/HDEF/layout-id = Audio_ID, see {Guide} Add ssdt/HDEF.pdf
-https://github.com/toleda/audio_ssdt_enabler
-3a. Audio_ID = 1/audio_ssdt-hdae-1.zip
+3a. Audio_ID = 1/layout-id: 0x01, 0x00, 0x00, 0x00, 0x00
 4. Clover/Config.plist/Devices, see ML-Clover Realtek ALC AppleHDA Injection.pdf
-https://github.com/toleda/audio_ALCInjection
 4a. Audio_ID = 1/Audio/Inject=1
 
 Download
@@ -45,13 +43,14 @@ Installation/Shell Script/.command
 1. Downloads/audio_ALC885-master/
 1a. for 10.8.4 and older/audio_alc885-84_patch.command
 1b. for 10.8.5/audio_alc885-85_patch.command
+1c. for 10.9/audio_alc885-90_patch.command
 2. Launch (double click: audio_alc885-ver_patch.command)
 3. Enter password at prompt
 4. Save Log: Terminal/Shell/Export Text As../Terminal Saved Output/Desktop/audio_ALC885
 5. Restart
 
 Troubleshooting
-1. ML-Realtek ALC AppleHDA Capabilities.pdf
+1. M-Realtek ALC AppleHDA No Audio.pdf
 2. Post to http://www.insanelymac.com/forum/topic/290797-mountain-lion-realtek-alc-applehda-audio/
 3. Post to http://www.tonymacx86.com/audio/76309-mountain-lion-multibeast-no-audio-solutions-problem-reporting.html
 
@@ -66,6 +65,7 @@ toleda
 https://github.com/toleda/audio_ALC885
 audio_alc885-84_patch.command
 audio_alc885-85_patch.command
+audio_alc885-90_patch.command
 README.txt
 Files:
 885.zip
@@ -92,7 +92,8 @@ Prepare Desktop/audio_ALC885 ...
 Archive:  885.zip
    creating: 885/
   inflating: 885/Info-84.plist       
-  inflating: 885/Info-85.plist     
+  inflating: 885/Info-85.plist
+  inflating: 885/Info-90.plist     
  extracting: 885/layout1.xml.zlib    
  extracting: 885/layout2.xml.zlib    
  extracting: 885/layout3.xml.zlib    
