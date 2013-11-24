@@ -25,7 +25,6 @@ Realtek ALC885 AppleHDA.kext Audio_ID
 3. Audio_ID: 1 requires HDMI audio dsdt edits for HDMI audio 
 
 Four techniques enable the Realtek ALC AppleHDA.kext, select one
-http://www.insanelymac.com/forum/topic/290796-realtek-alc-applehda-audio-injection/
 1. No dsdt/audio enabler = Audio_ID, install either kext (use 1a or 1b, not both)
 1a. Audio_ID = 1/HDAEnabler1.kext https://github.com/toleda/audio_HDAEnabler1
 2. dsdt/HDEF/layout-id = Audio_ID, see {Guide} Add or Edit dsdt/HDEF.pdf
