@@ -10,21 +10,27 @@
 # 2. Rename Desktop/audio_ALC885 to audio_ALC885-archive (if present)
 # 3. Verify Downloads/audio_ALC885-master present
 #
-# Installation
-# 1. Finder/File/Open With/Terminal
-# 2. Enter password at prompt
+# Installation (Do not move folder or files)
+# 1. Downloads/audio_ALC885-master/audio_alc885-92_patch.command
+# 2. Double click audio_alc885-92_patch.command
+# 3. Enter password at prompt
 #
-# Agreement
-# The audio_ALC885_patch is for personal use only.  Do not distribute the patch, any or 
-# all of the enclosed files or the resulting patched AppleHDA.kext for any reason without # permission. The audio_ALC885_patch is provided as is and without any kind of warranty.
+echo " "
+echo "Agreement"
+echo "The audio_ALC885_patch is for personal use only. Do not distribute the patch," 
+echo "any or all of the enclosed files or the resulting patched AppleHDA.kext for any" 
+echo "reason without permission. The audio_ALC885_patch is provided as is and without" 
+echo "any kind of warranty."
+echo " "
 #
 echo "Prepare Desktop/audio_ALC885 ..."
 cd ~
+rm -rf Desktop/audio_ALC885
 cp -R Downloads/audio_ALC885-master Desktop/audio_ALC885
 cp -R /System/Library/Extensions/AppleHDA.kext Desktop/audio_ALC885/AppleHDA-orig.kext
 cd Desktop/audio_ALC885
-unzip 885.zip
-cd 885
+unzip -q 885.zip
+cd 885885
 
 echo "Install files ..."
 sudo rm -R /System/Library/Extensions/AppleHDA.kext/Contents/Plugins/AppleHDAHardwareConfigDriver.kext/Contents/Info.plist
@@ -39,7 +45,6 @@ echo "Fix permissions ..."
 sudo chown -R root:wheel /System/Library/Extensions/AppleHDA.kext
 
 echo "Kernel cache..."
-sudo rm -fr /System/Library/Caches/*
 sudo touch /System/Library/Extensions
 
 cd ~

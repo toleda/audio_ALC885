@@ -6,6 +6,8 @@ OS X Realtek ALC885 Onboard Audio
 This guide enables OS X Realtek ALC885 onboard audio on Intel based motherboards with a bootable clean install of OS X. The Realtek AppleHDA.kext only works with the codec the kext was edited for and patches the native AppleHDA.kext.
 ____________________________________________________________Download ZIP >  > 
 
+Note: cloverALC, see https://github.com/toleda/audio_cloverALC
+
 Requirements
 1. Native S/L/E/AppleHDA.kext (restore native AppleHDA.kext with Combo Update)
 2. Supported OS X versions:
@@ -26,7 +28,7 @@ Realtek ALC885 AppleHDA.kext Audio_ID
 2. Audio_ID: 1 supports analog 5.1 surround sound
 3. Audio_ID: 1 requires HDMI audio dsdt edits for HDMI audio 
 
-Four techniques enable the Realtek ALC AppleHDA.kext, select one
+Techniques to enable the Realtek ALC AppleHDA.kext, select one
 1. No dsdt/audio enabler = Audio_ID, install either kext (use 1a or 1b, not both)
 1a. Audio_ID = 1/HDAEnabler1.kext https://github.com/toleda/audio_HDAEnabler1
 2. dsdt/HDEF/layout-id = Audio_ID, see {Guide} Add or Edit dsdt/HDEF.pdf
@@ -35,12 +37,15 @@ Four techniques enable the Realtek ALC AppleHDA.kext, select one
 3a. Audio_ID = 1/layout-id: 0x01, 0x00, 0x00, 0x00, 0x00
 4. Clover/Config.plist/Devices, see ML-Clover Realtek ALC AppleHDA Injection.pdf
 4a. Audio_ID = 1/Audio/Inject=1
+5. Chameleon/Chameleon Installer/Customize/Settings
+5a. Audio_ID = 1/HDEF Layout=1
+5b. Audio_ID = 2/HDEF Layout=2
 
 Download
 1. https://github.com/toleda/audio_ALC885
 2. Select: Download ZIP (above and right)
 
-Installation/Shell Script/.command
+Installation/Shell Script/.command (Do not move folder or files)
 1. Downloads/audio_ALC885-master/
 1a. for 10.9.2/audio_alc885-92_patch.command
 1b. for 10.9.1/audio_alc885-91_patch.command
@@ -75,7 +80,7 @@ RevoGirl rip
 
 toleda
 https://github.com/toleda/audio_ALC885
-audio_alc885-91_patch.command
+audio_alc885-92_patch.command
 audio_alc885-91_patch.command
 audio_alc885-90_patch.command
 audio_alc885-85_patch.command
@@ -102,16 +107,7 @@ Details - audio_ALC885-ver_patch script  (see Requirements)
 _____________________________
 
 ...$ .../Downloads/audio_ALC885-master/audio_alc885-85_patch.command ; exit;
-Prepare Desktop/audio_ALC885 ...
-Archive:  885.zip
-   creating: 885/
-  inflating: 885/Info-84.plist       
-  inflating: 885/Info-85.plist
-  inflating: 885/Info-90.plist     
- extracting: 885/layout1.xml.zlib    
- extracting: 885/layout2.xml.zlib    
- extracting: 885/layout3.xml.zlib    
-  inflating: 885/Platforms.xml.zlib  
+Prepare Desktop/audio_ALC885 ...  
 Install files ...
 Password:
 Patch binary ...
