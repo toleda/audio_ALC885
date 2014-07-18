@@ -30,7 +30,7 @@ cp -R Downloads/audio_ALC885-master Desktop/audio_ALC885
 cp -R /System/Library/Extensions/AppleHDA.kext Desktop/audio_ALC885/AppleHDA-orig.kext
 cd Desktop/audio_ALC885
 unzip -q 885.zip
-cd 885885
+cd 885
 
 echo "Install files ..."
 sudo rm -R /System/Library/Extensions/AppleHDA.kext/Contents/Plugins/AppleHDAHardwareConfigDriver.kext/Contents/Info.plist
